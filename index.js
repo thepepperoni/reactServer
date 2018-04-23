@@ -1,12 +1,11 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const opn = require('opn');
-const request = require('request');
+var express = require('express');
+var path = require('path');
+var app = express();
+let opn = require('opn');
 //const httpFunc = require('./http-request');
 
-const port = process.env.PORT || 3000;
-app.use(express.static(path.join(__dirname, '/build')));
+var port = process.env.PORT || 3000;
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
