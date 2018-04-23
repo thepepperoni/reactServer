@@ -54,7 +54,7 @@ function buildResponse(obj,name,values){
 app.listen(port,function() {
         console.log("Running at Port " + port);
         console.log("http://localhost:" + port);
-        opn('http://localhost:' + port);
+        //opn('http://localhost:' + port);
     }
 );
 
